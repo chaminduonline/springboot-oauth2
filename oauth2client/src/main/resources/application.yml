@@ -1,0 +1,25 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /ui
+    session:
+      cookie:
+        name: UISESSION
+
+
+security:
+  oauth2:
+    client:
+      client-id: ClientId
+      client-secret: secret
+      access-token-uri: http://localhost:8081/oauth/token
+      user-authorization-uri: http://localhost:8081/oauth/authorize
+    resource:
+      user-info-uri: http://localhost:8081/rest/hello/principal
+
+
+
+
+spring:
+  thymeleaf:
+    cache: false
